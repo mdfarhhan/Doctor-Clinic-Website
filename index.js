@@ -9,8 +9,11 @@ function sendAppointment() {
     var ContactNumber = document.querySelector('.contactNumber').value;
     var Patient_Name = document.querySelector('.patientName').value;
     var Patient_Age = document.querySelector('.patientAge').value;
+    var Patient_Gender = document.querySelector('.gender').value;
     var Address = document.querySelector('.address').value;
     var Symptoms = document.querySelector('.symp').value;
+    var doctor_name = document.querySelector('.doctorname').value;
+
 
     var url = "https://wa.me/" + phoneNumber + "?text="
         + "*Name :* " + name + "%0a"
@@ -18,8 +21,10 @@ function sendAppointment() {
         + "*Contact Number :* " + ContactNumber + "%0a"
         + "*Patient Name :* " + Patient_Name + "%0a"
         + "*Patient Age :* " + Patient_Age + "%0a"
-        + "*Symptoms :* " + Symptoms + "%0a"
+        + "*Patient Gender :* " + Patient_Gender + "%0a"
         + "*Address :* " + Address + "%0a"
+        + "*Symptoms :* " + Symptoms + "%0a"
+        + "*Doctor Name :* " + doctor_name + "%0a"
         + "custumer token generated successfullyyyy";
 
     window.open(url, '_blank').focus();
